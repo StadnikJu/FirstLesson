@@ -11,23 +11,26 @@ ul {
 body {
     font-style: normal;
     line-height: normal;
-    font-family: Rubik, sans-serif;
+    font-family: 'Rubik', sans-serif;
+    min-width: 375px;
 } 
 
-
 .hero {
-    width: 1440px;
-    height: 1024px;
+    min-height: 100vh;
     background-color: #eff2f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .card {
-    width: 1170px;
-    height: 800px;
+    max-width: 1170px;
+    min-height: 800px;
     background-color: #fff;
     box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25);
     padding: 60px 0 70px;
     display: flex;
+    margin: 40px;
 }
 
 .product-img-block {
@@ -112,7 +115,7 @@ body {
 .color-options {
     display: flex;
     align-items: center;
-    gap: 40px;
+    gap: 26px;
     margin-bottom: 65px;
 }
 
@@ -176,7 +179,7 @@ body {
     letter-spacing: 0.01em;
     text-transform: uppercase;
     color: rgba(20, 20, 20, 0.8);
-
+    font-family: 'Rubik', sans-serif;
     width: 80px;
     height: 24px;       
     border: none;
@@ -197,10 +200,9 @@ body {
 }
 
 .btn {
-    width: 510px;
+    width: 100%;
     height: 70px;
     background-color:  #141414;
-
     font-weight: 500;
     font-size: 18px;
     letter-spacing: 0.01em;
@@ -213,3 +215,56 @@ body {
 .btn:hover {
     transform: scale(1.05);
 }
+
+@media (max-width: 1040px) {
+    .card {
+        flex-direction: column;
+    }
+    .product-img-block {
+        border-right: none;
+        border-bottom: 2px solid rgba(20,20,20,0.15);
+        min-width: auto; 
+    }
+    .preview-wrap {
+        margin: 60px 0 70px
+    }
+    .product-info-block {
+        padding: 60px 60px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        margin: 15px 15px 40px;
+    }
+
+    .main-img {
+        width: 250px;
+    }
+
+    .product-info-block {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .main-title {
+        font-size: 34px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .description {
+        font-size: 16px;
+        margin: 50px 0 55px;
+    }
+
+    .color-options {
+    gap: 36px;
+}
+}
+
+
+
+
